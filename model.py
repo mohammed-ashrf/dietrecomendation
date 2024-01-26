@@ -40,7 +40,8 @@ model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y
 # Evaluate the model
 test_loss, test_acc = model.evaluate(X_test, y_test)
 print(f'Test accuracy: {test_acc}')
-
+# Save the model
+model.save('path_to_save_model')
 # Make predictions for a new user
 new_user_data = np.array([[25, 'Male', 'Active', 'Vegetarian', 70, 175]])  # Customize with your data
 new_user_data[:, 1] = label_encoder.transform(new_user_data[:, 1])
@@ -52,3 +53,4 @@ predictions = model.predict(new_user_data)
 recommended_diet = label_encoder.inverse_transform(np.argmax(predictions))
 
 print(f'Recommended Diet: {recommended_diet}')
+
