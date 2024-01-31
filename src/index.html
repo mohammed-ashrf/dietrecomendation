@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Recommendation App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <h1>Diet Recommendation App</h1>
+        <label for="age">Age:</label>
+        <input type="number" id="age" required><br>
+
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" required><br>
+
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" required><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+
+        <label for="activityLevel">Activity Level:</label>
+        <select id="activityLevel" required>
+            <option value="sedentary">Sedentary</option>
+            <option value="lightly-active">Lightly active</option>
+            <option value="moderate-active">Moderately active</option>
+            <option value="very-active">Very active</option>
+            <option value="extremely-active">Extremely active</option>
+        </select><br>
+
+        <label for="dietaryPreferences">Dietary Preferences:</label>
+        <select id="dietaryPreferences" required>
+            <option value="athlete">Athlete</option>
+            <option value="normal">Normal</option>
+            <option value="diabetic">Diabetic</option>
+        </select><br>
+
+        <button onclick="calMacros()">Calculate Diet</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
