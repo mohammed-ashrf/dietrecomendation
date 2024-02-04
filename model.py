@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 from tensorflow.keras import layers, models
 
 # Load your dataset (replace 'your_dataset.csv' with your actual dataset)
-df = pd.read_csv('your_dataset.csv')
+df = pd.read_csv('dataset.csv')
 
 # Sample features (customize based on your dataset)
 features = df[['age', 'gender', 'activity_level', 'dietary_preference', 'weight', 'height']]
