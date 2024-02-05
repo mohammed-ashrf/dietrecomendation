@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the pre-trained machine learning model
-model = load_model('path_to_saved_model')  # Replace with the actual path
+model = load_model('model.h5')  # Replace with the actual path
 
 # Function to preprocess input data before making predictions
 def preprocess_data(data):
